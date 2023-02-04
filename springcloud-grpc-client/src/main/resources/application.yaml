@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: cloud-grpc-client # 应用名
+  cloud:
+    nacos:
+      # Nacos 作为注册中心的配置项，对应 NacosDiscoveryProperties 配置类
+      discovery:
+        server-addr: http://wmp-nacos.ops.weiboyi.com # Nacos 服务器地址
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+
+grpc:
+  # gRPC 客户端配置，对应 GrpcChannelsProperties 配置类的映射
+  client:
+    # client 下的配置有全局和指定配置，这里的 cloud-grpc-service 是我们调用的目标服务名
+    cloud-grpc-service:
+      negotiation-type: PLAINTEXT

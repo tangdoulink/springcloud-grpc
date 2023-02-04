@@ -1,0 +1,21 @@
+### 1. IndexController-request-get
+GET http://localhost:8080/index/get?id=1
+Accept: application/json
+
+
+### 2.IndexController-request-create
+POST http://localhost:8080/index/create?name=zhangsan&gender=1
+Accept: application/json
+
+
+### 3. IndexController-request-get
+GET http://localhost:8080/index/type
+Accept: application/json
+
+### 4. IndexController-request-get
+POST http://localhost:8080/h/hello?name=zhangsan
+Accept: application/x-protobuf
+
+### 5. IndexController-request-get
+POST http://localhost:8080/h/hello?name=zhangsan
+Accept: application/json

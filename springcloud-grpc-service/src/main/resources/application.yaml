@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: cloud-grpc-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://wmp-nacos.ops.weiboyi.com # Nacos 服务器地址
+
+grpc:
+  # gRPC 服务器配置，对应 GrpcServerProperties 配置类
+  server:
+    port: 0 # gRPC Server 随机端口
+
+server:
+  port: 0 # Web Server 随机端口

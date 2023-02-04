@@ -1,0 +1,26 @@
+//使用 proto3 语法 ,未指定则使用proto2
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package com.zpb.grpc.proto;
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 2;
+}
+
+service Hello {
+
+  rpc hello(HelloRequest) returns (HelloResponse){}
+
+  rpc manyHello(HelloRequest) returns (stream HelloResponse){}
+
+  rpc sayHello(stream HelloRequest) returns (HelloResponse){}
+
+  rpc chatHello(stream HelloRequest) returns (stream HelloRequest){}
+
+}

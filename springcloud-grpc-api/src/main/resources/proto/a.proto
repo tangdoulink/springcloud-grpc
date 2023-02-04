@@ -1,0 +1,21 @@
+
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package com.zpb.grpc.proto;
+
+import "hello.proto";
+
+service Hello {
+
+  rpc hello(HelloRequest) returns (HelloResponse){}
+
+  rpc manyHello(HelloRequest) returns (stream HelloResponse){}
+
+  rpc sayHello(stream HelloRequest) returns (HelloResponse){}
+
+  rpc chatHello(stream HelloRequest) returns (stream HelloRequest){}
+
+}
